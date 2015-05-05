@@ -1,0 +1,17 @@
+<h1>ADD Your Victime</h1>
+
+<div class="form">
+
+  <form action='/add_patient' method= "post">
+    <input id= "doctor_id" name= "doctor_id" type= "hidden" value= '<%= @doctor.id()%>'>
+
+    <label for="Name">Patient name:</label>
+    <input id="name" name="name" type="text">
+
+    <label for="birthdate">Birthdate:</label>
+    <input id="birthdate" name="birthdate" type="text">
+
+    <button type="submit"> ADD Victim</button>
+  </form>
+
+</div>
