@@ -29,6 +29,12 @@ describe(Patient) do
     end
   end
 
-
+describe('.find') do
+  it('locates the relevant patient record') do
+    test_patient = Patient.new({:name => "Susie Q", :birthdate => "1984-04-15", :doctor_id => 1, :id => nil})
+    test_patient.save()
+    expect(Patient.find(test_patient)).to(eq(test_patient))
+  end
+end
 
     end

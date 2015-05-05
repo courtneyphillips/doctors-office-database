@@ -33,4 +33,33 @@ class Doctor
     result = DB.exec("INSERT INTO doctors (name, specialty) VALUES ('#{@name}', '#{@specialty}') RETURNING id;")
     @id = result.first().fetch("id").to_i
   end
+
+
+  define_method(:patient_list) do
+    patients = []
+    returned_patients = DB.exec("SELECT * FROM patients WHERE doctor_id = #{self.id()};")
+    returned_patients.each do |patient|
+       name = patient.fetch("name")
+       birthdate = patient.fetch("birthdate")
+       id = patient.fetch("id").to_i
+       doctor_id = patient.fetch("doctor_id").to_i
+      #  if doctor_id == .id()
+        patients.push(Patient.new({:name => name, :birthdate => birthdate, :doctor_id => doctor_id, :id => id}))
+      # end
+    end
+    patients
+  end
+
+  define_singleton_method(:find) do |person|
+      all_doctors = Doctor.all()
+      found_doctor = nil
+      all_doctors.each do |doctor|
+        if person == doctor
+          found_doctor = doctor
+        end
+      end
+      found_doctor
+    end
+
+
 end

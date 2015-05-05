@@ -30,6 +30,16 @@ class Patient
     patients
   end
 
+  define_singleton_method(:find) do |person|
+      all_patients = Patient.all()
+      found_patient = nil
+      all_patients.each do |patient|
+        if person == patient
+          found_patient = patient
+        end
+      end
+      found_patient
+    end
 
 
 end
