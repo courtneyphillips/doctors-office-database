@@ -14,10 +14,21 @@ describe(Patient) do
 
   describe('#==') do
     it('recognizes when two entries are the same') do
-      test_patient = Patient.new({:name => "Hulk Hogan", :birthdate => 1915-05-05, :doctor_id => 1, :id => nil})
-      test_patient2 = Patient.new({:name => "Hulk Hogan", :birthdate => 1915-05-05, :doctor_id => 1, :id => nil})
-    expect(test_patient).to(eq(test_patient2))
+      test_patient = Patient.new({:name => "Hulk Hogan", :birthdate => "1915-05-05", :doctor_id => 1, :id => nil})
+      test_patient2 = Patient.new({:name => "Hulk Hogan", :birthdate => "1915-05-05", :doctor_id => 1, :id => nil})
+      expect(test_patient).to(eq(test_patient2))
+    end
   end
-end
 
-end
+
+  describe('#save') do
+    it('saves the entry for future recall') do
+      test_patient = Patient.new({:name => "Hulk Hogan", :birthdate => "1915-05-05", :doctor_id => 1, :id => nil})
+      test_patient.save()
+      expect(Patient.all).to(eq([test_patient]))
+    end
+  end
+
+
+
+    end
