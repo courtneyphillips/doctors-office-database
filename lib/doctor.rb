@@ -7,14 +7,15 @@ class Doctor
     @name = attributes.fetch(:name)
     @specialty = attributes.fetch(:specialty)
     @id = attributes.fetch(:id)
+
   end
 
   define_method(:==) do |other|
     same_class = self.class() == other.class()
     same_name = self.name() == other.name()
     same_specialty = self.specialty() == other.specialty()
-    same_id =  self.id() == other.id()
-    same_class && same_name && same_specialty && same_id
+
+    same_class && same_name && same_specialty
   end
 
   define_singleton_method(:all) do
