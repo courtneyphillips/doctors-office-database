@@ -1,10 +1,15 @@
 <h1>Our super sick doctors, bro:</h1>
 
+
+<img class="horses" src='/img/douchey.jpg'>
+
+
+<div class="doctors">
   <ul>
     <% @doctors.each() do |doctor| %>
       <li><a href="/patients/<%= doctor.id() %>"> <%= doctor.name() %></a></li>
         <% end %>
   </ul>
+</div>
 
-
-  <h2><a href="/doctor_form">TOSS IN A NEW DOC, MAN</a></h2>
+  <h2><a href="/doctor_form"><button type="button" class="btn btn-primary btn-lg btn-block">TOSS IN A NEW DOC, MAN</button></a></h2>

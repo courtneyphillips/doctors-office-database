@@ -1,0 +1,40 @@
+body {
+  margin: 100, 100;
+  align: center;
+}
+
+.btn {
+  background-color: #5bc0de;
+  border: none;
+  margin-top: 45px;
+  hover: none;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(../img/wolf.jpeg);
+    background-position: 0% 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.horses {
+  align: center;
+  border-radius: 100px;
+    padding: 20px;
+    width: 750px;
+    height: 500px;
+    display: block;
+}
+
+div {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.doctors {
+  text-align: center;
+  background-color: #eee;
+  font-size: 20px;
+}
