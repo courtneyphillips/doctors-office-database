@@ -14,7 +14,6 @@ class Doctor
     same_class = self.class() == other.class()
     same_name = self.name() == other.name()
     same_specialty = self.specialty() == other.specialty()
-
     same_class && same_name && same_specialty
   end
 
@@ -50,11 +49,11 @@ class Doctor
     patients
   end
 
-  define_singleton_method(:find) do |person|
+  define_singleton_method(:find) do |id|
       all_doctors = Doctor.all()
       found_doctor = nil
       all_doctors.each do |doctor|
-        if person == doctor
+        if doctor.id == id
           found_doctor = doctor
         end
       end

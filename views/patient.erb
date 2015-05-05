@@ -1,0 +1,10 @@
+<h1>Ice these patients, man:</h1>
+
+  <ul>
+    <% @doctor.patient_list.each() do |patient| %>
+      <li><%= patient.name() %></li>
+    <% end %>
+  </ul>
+
+
+  <h2><a href="/patient/<%= @doctor.id()%>/patient_form">ADD a NEW VICTIM!!!</a></h2>

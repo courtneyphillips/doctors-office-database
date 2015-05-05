@@ -1,0 +1,10 @@
+<h1>Our super sick doctors, bro:</h1>
+
+  <ul>
+    <% @doctors.each() do |doctor| %>
+      <li><a href="/patients/<%= doctor.id() %>"> <%= doctor.name() %></a></li>
+        <% end %>
+  </ul>
+
+
+  <h2><a href="/doctor_form">TOSS IN A NEW DOC, MAN</a></h2>

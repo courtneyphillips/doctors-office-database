@@ -1,14 +1,4 @@
-require('rspec')
-require('patient')
-require('pg')
-
-DB = PG.connect({:dbname => 'office_test'})
-
-RSpec.configure do |config|
-  config.after(:each) do
-    DB.exec("DELETE FROM patients *;")
-  end
-end
+require("spec_helper")
 
 describe(Patient) do
 

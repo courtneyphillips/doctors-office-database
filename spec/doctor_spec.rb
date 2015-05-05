@@ -1,16 +1,4 @@
-require('rspec')
-require('doctor')
-require('pg')
-require('patient')
-
-DB = PG.connect({:dbname => 'office_test'})
-
-RSpec.configure do |config|
-  config.after(:each) do
-    DB.exec("DELETE FROM doctors *;")
-    DB.exec("DELETE FROM patients *;")
-  end
-end
+require("spec_helper")
 
 describe(Doctor) do
 
@@ -51,4 +39,7 @@ describe(Doctor) do
       expect(test_doctor2.patient_list()).to(eq([]))
     end
   end
+
+
+
 end
