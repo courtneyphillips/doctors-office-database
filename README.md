@@ -4,7 +4,7 @@
 
 ## Synopsis
 
-Doctor's Office Database is a simple Ruby application built by [Courtney Phillips](https://github.com/courtneymaepdx) with the ability to organize fictional medical professionals and their corresponding patients into a database for later recall.
+Doctor's Office Database is a simple Ruby application built by [Courtney Phillips](https://github.com/courtneymaepdx) with the ability to organize fictional medical professionals and their corresponding patients into a database for later recall. Crafted as part of the Spring 2015 Ruby course curriculum at [Epicodus](https://www.epicodus.com/).
 
 ## Motivation
 
